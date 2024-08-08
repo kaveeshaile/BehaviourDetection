@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Running or Falling</title>
+</head>
+<body>
+    <h1>Identify Abnormal behaviour Based on Sensor data</h1>
+    <form action="/predict" method="post">
+        <label for="input1">Input 1:</label>
+        <input type="text" id="input1" name="input1" required><br><br>
+        
+        <label for="input2">Input 2:</label>
+        <input type="text" id="input2" name="input2" required><br><br>
+        
+        <label for="input3">Input 3:</label>
+        <input type="text" id="input3" name="input3" required><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
